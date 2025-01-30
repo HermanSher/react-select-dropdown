@@ -1,6 +1,6 @@
 {
   "name": "react-multiselect-virtualized",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A highly customizable and performant dropdown component for React",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

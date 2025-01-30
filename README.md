@@ -56,28 +56,29 @@ Here's a simple example of how to use the `MultiSelectDropdown` component:
 
 ```jsx
 import React, { useState } from "react";
-import MultiSelectDropdown from "react-multiselect-dropdown";
-
-const App = () => {
-  const [selected, setSelected] = useState([]);
-  
-  const items = Array.from({ length: 1000 }, (_, i) => ({
+import MultiSelectDropdown from "react-multiselect-virtualized";
+const generateItems = (count) =>
+  Array.from({ length: count }, (_, i) => ({
     title: `Item ${i + 1}`,
     value: i + 1,
   }));
+export const Test = () => {
+  const [items] = useState(() => generateItems(100000));
+  const [selected, setSelected] = useState([]);
+  console.log("selected", selected);
 
   return (
     <MultiSelectDropdown
       data={items}
       onChange={setSelected}
       multiSelect={true}
+      showSelected
       height="300px"
-      width="100%"
+      width="300px"
     />
   );
 };
 
-export default App;
 ```
 
 ## Props
