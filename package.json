@@ -1,5 +1,5 @@
 {
-  "name": "react-multiselect-dropdown",
+  "name": "react-multiselect-virtualized",
   "version": "1.0.0",
   "description": "A highly customizable and performant dropdown component for React",
   "main": "dist/index.js",
